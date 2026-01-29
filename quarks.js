@@ -1,3 +1,4 @@
+import getInputs from "./input.js"
 
 iteration = 0;
 
@@ -12,15 +13,6 @@ function init() {
         drawLines(ctx, dots, input.color, input.tolerance)
         moveDots(dots, input.speed);
     }, 5);
-}
-
-function getInputs(){
-    let count = document.getElementById("amount").value;
-    let tolerance = document.getElementById("tolerance").value;
-    let speed = 100 / document.getElementById("speed").value;
-    let color = document.getElementById("color").value;
-
-    return input = {count:count, tolerance:tolerance, speed:speed, color:color}
 }
 
 function computeDots(dots, amount) {
@@ -85,4 +77,3 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
 }
 
-window.Onload = init();
