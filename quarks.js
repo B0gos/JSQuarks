@@ -1,7 +1,5 @@
 import getInputs from "./input.js"
 
-iteration = 0;
-
 function init() {
     let ctx = document.getElementById("canvas").getContext("2d");
     let dots = [];
